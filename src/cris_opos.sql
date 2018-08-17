@@ -268,7 +268,100 @@ INSERT INTO preguntas (pregunta, op1, op2, op3, op4, respuesta,tema)
   'todas son correctas',
   '4',
   '4'
+  ),
+(
+  'El candidato a la Presidencia del Gobierno necesitará:',
+  'el voto de la mayoría simple de los miembros del Congreso de los Diputados',
+  'el voto de la mayoría absoluta de los miembros del Congreso de los Diputados',
+  'el voto favorable de dos terceras partes de los miembros del Congreso de los Diputados',
+  'el voto favorable de tres quintas partes de los miembros del Congreso de los Diputados',
+  '2',
+  '4'
+  ),
+(
+  'El Rey disolverá ambas Cámaras y convocará nuevas elecciones con el refrendo del Presidente del Congreso, si ningún candidato hubiere obtenido la confianza del Congreso, una vez transcurrido el plazo de:',
+  '1 mes',
+  '2 meses',
+  '20 días',
+  '10 días',
+  '2',
+  '4'
+  ),
+(
+  'El Titulo VIII de la Constitución Española se llama:',
+  'Del Poder Judicial',
+  'Economía y Hacienda',
+  'De la organización territorial del Estado',
+  'De las relaciones entre el Gobierno y las Cortes Generales',
+  '3',
+  '5'
+  ),
+(
+  '¿Cuántos capítulos tiene el Título VIII de la Constitución Española?:',
+  '1',
+  '2',
+  '3',
+  '4',
+  '3',
+  '5'
+  ),
+(
+  ' El Estado se organiza territorialmente en:',
+  'ciudades, provincias y las Comunidades Autónomas que se constituyan',
+  'cabildos, comarcas y las provincias que se constituyan',
+  'municipios, comarcas y las provincias que se constituyan',
+  'municipios, provincias y las Comunidades Autónomas que se constituyan',
+  '4',
+  '5'
+  ),
+(
+  'Velando por el establecimiento de un equilibrio económico, adecuado y justo, entre las diversas partes del territorio español, el Estado garantiza la realización efectiva del principio de',
+  'solidaridad',
+  'igualdad',
+  'seguridad jurídica',
+  'justicia universal',
+  '1',
+  '5'
+  ),
+(
+  'Señala la incorrecta:',
+  'las diferencias entre los Estatutos de las distintas Comunidades Autónomas podrán implicar privilegios económicos o sociales',
+  'todos los españoles tienen los mismos derechos y obligaciones en cualquier parte del territorio del Estado',
+  'ninguna autoridad podrá adoptar medidas que directa o indirectamente obstaculicen la libertad de circulación y establecimiento de las personas y la libre circulación de bienes en todo el territorio español',
+  'los municipios gozan de autonomía para la gestión de sus respectivos intereses',
+  '1',
+  '5'
+  ),
+(
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  ''
+  ),
+(
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  ''
+  ),
+(
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  ''
   )
+  
+  
+  
   
   
   
