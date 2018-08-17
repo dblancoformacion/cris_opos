@@ -1,0 +1,130 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	background-color: #F7F7F7FF;
+}
+h1,h2{
+	text-align: center;
+	margin: 5px;
+}
+.wrapper{
+	width: 1100px;
+	margin: 20px auto;
+	background-color:red;
+}
+.izquierda{
+	float: left;
+	width: 69%;
+	margin-right: 1%;	
+}
+
+.derecha{
+	float: left;
+	width: 30%;
+	height: 100%;
+}
+
+.izquierda ul{
+	list-style-type: none;
+}
+div>p{
+	font-weight: bold;
+}
+/* LIGTH BOX */
+.mostrarSoluciones{
+	opacity: 0;
+	position: fixed;
+	width: 400px;
+	top:30%;
+	left:40%;
+	background-color: #F8F9F9;
+	border-radius: 6px;
+	box-shadow: 3px 3px 10px 2px rgba(8,8,8,8);
+}
+.sol{
+		margin: 20px;
+		font-family: arial;
+		font-weight: 600;
+}
+
+.izquierda a{
+	display: block;
+	width: 50px;
+	line-height: 50px;
+	text-decoration: none;
+	float:right;
+	text-align: center;
+	color: #C0392B;
+	font-size: 30px;
+}
+label{
+	padding: 5px;
+}
+.izquierda li{
+	margin: 10px;
+}
+
+#boton{
+	opacity: 0;
+	margin: 0 auto;
+	width: 60px;
+	height: 30px;
+	font-weight: bold;
+}
+
+/* Estilos */
+
+.temas{
+	background-color:#333;
+	color: #f2f2f2;
+	height: 150px;
+}
+input[name=t_ini], input[name=t_fin],input[name=n] {
+	width: 100px;
+}
+input[type='radio']{
+	opacity: 0;
+}
+#ir{
+	width: 50px;
+	margin: 0 20px;
+	width: 60px;
+	height: 30px;
+	font-weight: bold;
+}
+
+.derecha>ul>li>a{
+	display: table-cell;
+	font-family: arial;
+	font-size: 14px;
+	line-height: 30px;
+	width: 300px;
+	background-color: #ABEBC6;
+	color: #20633C;
+	border:2px solid #20633C;
+	border-bottom: none;
+
+	text-align: left;
+	padding:5px;
+	text-decoration: none;
+
+}
+.derecha>ul>li>a:nth-child(24){
+	border-bottom: 2px solid #20633C;
+}
+.derecha>ul{
+	list-style-type: none;
+}
+
+.derecha>ul>li>a:hover{
+	color:#ABEBC6;
+	background-color: #20633C;
+	font-weight: bold;
+}
+.cronometro{
+	float:right;
+}
