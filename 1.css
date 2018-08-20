@@ -17,6 +17,12 @@ h2{
 	border:2px solid #007F46FF;
 	color: black;
 }
+label{
+	padding: 5px;
+}
+
+/* ********************** ESTRUCTUTA ********************** */
+
 .wrapper{
 	width: 1100px;
 	margin: 20px auto;
@@ -40,7 +46,7 @@ h2{
 div>p{
 	font-weight: bold;
 }
-/* LIGTH BOX */
+/* **********************SOLUCIONES **********************  */
 .mostrarSoluciones{
 	opacity: 0;
 	position: fixed;
@@ -77,13 +83,32 @@ div>p{
 	color: #C0392B;
 	font-size: 30px;
 }
-label{
-	padding: 5px;
-}
+
 .izquierda li{
 	margin: 10px;
 }
 
+
+/* **********************RESPUESTAS ********************** */
+ul>li>div>ul>li{
+	line-height: 25px;
+}
+
+ul>li>div>ul>li:hover{
+background-color: #E5E7E9 ;
+}
+
+/* **********************BOTONES ********************** */
+
+/* ELEGIR TEMA */
+#ir{
+	width: 50px;
+	margin: 0 20px;
+	width: 60px;
+	height: 30px;
+	font-weight: bold;
+}
+/* CORREGIR */
 #boton{
 	opacity: 0;
 	margin: 0 auto;
@@ -92,25 +117,20 @@ label{
 	font-weight: bold;
 }
 
-/* Estilos */
+/* ANCHURA DE LOS INPUTS */
 
+
+input[name=t_ini], input[name=t_fin],input[name=n] {
+	width: 100px;
+}
+
+
+/* ZONA DERECHA */
 .temas{
 	background-color:#333;
 	color: #f2f2f2;
 	height: 150px;
 }
-input[name=t_ini], input[name=t_fin],input[name=n] {
-	width: 100px;
-}
-
-#ir{
-	width: 50px;
-	margin: 0 20px;
-	width: 60px;
-	height: 30px;
-	font-weight: bold;
-}
-
 .derecha>ul>li>a{
 	display: table-cell;
 	font-family: arial;
@@ -138,15 +158,17 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 	background-color: #20633C;
 	font-weight: bold;
 }
-.cronometro{
-	float:right;
-}
 
 
+/* CRONÓMETRO */
 
 @font-face{
  font-family:'DigitalDismay';
  src: url('font/DigitalDismay.otf');
+}
+.cronometro{
+	float:right;
+	opacity:0;
 }
 
 .digitos{
@@ -170,7 +192,4 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 	font-family: DigitalDismay;
 
 }
-.cronometro{
-	float:right;
-	opacity:0;
-}
+

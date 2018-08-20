@@ -332,6 +332,251 @@ INSERT INTO preguntas (pregunta, op1, op2, op3, op4, respuesta,tema)
   '1',
   '5'
   ),
+/* Preguntas tema 6 Unión Europea*/
+(
+'El Tratado de la Unión Europea:',
+'Se compone de tres pilares.',
+'Entró en vigor en 1991.',
+'Está compuesto por seis Títulos y un Preámbulo.',
+'Todas son correctas.',
+1,
+6
+),
+(
+'El Tratado de París:',
+'Se firmó el 18 de abril de 1952.',
+'Se firmó el 18 de abril de 1951.',
+'Instituye la CEE.',
+'Todas son incorrectas.',
+2,
+6
+),
+(
+'El Consejo Europeo se reúne:',
+'4 veces al año.',
+'2 veces al año.',
+'Al menos 3 veces al año.',
+'3 veces al año.',
+1,
+6
+
+),
+(
+'La presidencia del Consejo se ejerce de forma rotatoria cada:',
+'6 meses según un orden fijado por unanimidad del Consejo.',
+'4 meses según un orden fijado por mayoría cualificada del Consejo.',
+'6 meses según un orden fijado por mayoría cualificada del Consejo.',
+'4 meses según un orden fijado por unanimidad del Consejo.',
+1,
+6
+),
+(
+'Los intereses comunitarios los representa por excelencia:',
+'La Comisión.',
+'El Consejo.',
+'El Parlamento Europeo.',
+'Las tres anteriores son falsas.',
+1,
+6
+),
+(
+'La Comisión está formada por:',
+'27 miembros designados por los Gobiernos de los estados miembros.',
+'30 miembros elegidos por su competencia técnica.',
+'29 miembros elegidos por sus garantías de independencia.',
+'Todas son incorrectas.',
+4,
+6
+),
+(
+'Para constituir un Grupo en el Parlamento Europeo es necesario al menos:',
+'25 parlamentarios que pertenezcan a 1/4 de los Estados miembros.',
+'28 parlamentarios que pertenezcan a un Estado miembro.',
+'14 parlamentarios si pertenezcan a un Estado miembro.',
+'13 parlamentarios si pertenezcan a tres o más Estados miembros.',
+1,
+6
+),
+(
+'El Tribunal de Primera Instancia de las Comunidades Europeas:',
+'Está formado por 16 miembros.',
+'El mandato del Presidente será renovable.',
+'El período de mandato de sus miembros es de 5 años.',
+'Todas son correctas.',
+2,
+6
+),
+(
+'¿En qué fechas entraron en vigor respectivamente el TCEE y el TCEEA firmados en Roma?',
+'El 1 de enero de 1958 y el 3 de abril de 1960.',
+'El 1 de enero de 1956 y el 1 de enero de 1958.',
+'El 1 de enero de 1952 y el 1 de enero de 1958.',
+'Ambos entraron en vigor el 1 de enero de 1958.',
+4,
+6
+),
+(
+'¿En qué fecha se firmó el Tratado sobre la Unión Europea o Tratado de Maastricht?',
+'El 1 de noviembre de 1993.',
+'El 7 de febrero de 1992.',
+'El 9 de diciembre de 1991.',
+'El 30 de junio de 1994.',
+2,
+6
+),
+(
+'No es un órgano del Parlamento europeo:',
+'El Pleno.',
+'La Mesa.',
+'Las Comisiones.',
+'El Consejo de Gobierno.',
+4,
+6
+),
+(
+'¿Cuál ha sido la más reciente modificación del Tratado de la Unión Europea?',
+'El Tratado de Niza.',
+'El Tratado de Amsterdam.',
+'La Carta Europea de Derechos Humanos.',
+'Ninguna es correcta.',
+4,
+6
+),
+(
+'¿En qué fecha fue firmado oficialmente el Tratado de Ámsterdam?',
+'El 1 de noviembre de 1995.',
+'El 2 de mayo de 1996.',
+'El 23 de diciembre de 1997.',
+'El 2 de octubre de 1997.',
+4,
+6
+),
+(
+'Las decisiones de la Comisión se adoptarán, por regla general:',
+'Por mayoría de sus miembros.',
+'Cuando voten a favor de los acuerdos las 3/5 partes de los Comisarios.',
+'Por mayoría simple.',
+'Por voto favorable de los 2/3 de los Comisarios.',
+1,
+6
+),
+(
+'¿Cuántos miembros tiene el Parlamento Europeo en la actualidad?',
+'620.',
+'751',
+'587.',
+'590.',
+2,
+6
+),
+(
+'¿Cada cuánto tiempo se ejerce la Presidencia del Consejo de Ministros por parte de un
+determinado Estado miembro de la Unión Europea?',
+'De forma rotatoria cada seis meses.',
+'De forma aleatoria cada seis meses.',
+'De forma aleatoria cada tres meses.',
+'De forma rotatoria cada tres meses.',
+1,
+6
+),
+(
+'¿Quiénes componen el Consejo Europeo?',
+'Los Ministros de Asuntos Exteriores de cada uno de los Estados miembros y el Presidente de la
+Comisión.',
+'Los Jefes de Estado y/o de Gobierno de los Estados miembros acompañados por el Presidente de
+la Comisión, asistidos por los Ministros de Asuntos Exteriores de cada uno de los Estados miembros y
+un miembro de la Comisión.',
+'Los miembros de la Comisión y los Jefes de Estado y/o de Gobierno de los Estados miembros.',
+'Los Ministros de Asuntos Exteriores de cada uno de los Estados miembros y los miembros de la
+Comisión asistidos por el COREPER.',
+2,
+6
+),
+(
+'¿Cuántos miembros tiene la Comisión Europea en la actualidad tras la última ampliación de
+la Unión?',
+'17 miembros.',
+'27 miembros.',
+'Tantos como Estados miembros.',
+'Ninguna es correcta.',
+3,
+6
+),
+(
+'¿Cuánto tiempo dura el mandato del Presidente de la Comisión y, por tanto, del resto de sus
+miembros, al ser un órgano colegiado?',
+'4 años.',
+'6 años.',
+'5 años.',
+'3 años.',
+3,
+6
+),
+(
+'¿Qué institución de la actual Unión Europea tiene el monopolio de la iniciativa legislativa?',
+'El Consejo Europeo.',
+'El COREPER.',
+'El Consejo.',
+'Ninguna es correcta.',
+4,
+6
+),
+(
+'¿Cuánto dura el mandato del Presidente del Parlamento Europeo?',
+'5 años.',
+'El mismo tiempo que el Presidente de la Comisión.',
+'3 años.',
+'Dos años y medio.',
+4,
+6
+),
+(
+'¿Cuáles son los diferentes procedimientos de participación del Parlamento Europeo en el
+proceso legislativo comunitario?',
+'El procedimiento de consulta, el procedimiento de concertación, el procedimiento de control y el
+procedimiento de armonización.',
+'El procedimiento de concertación, el procedimiento de consulta, el de dictamen conforme y el
+procedimiento de codecisión.',
+'El procedimiento de consulta, el de concertación, el del artículo 189 del TCE, el de codecisión y el
+de dictamen conforme.',
+'El procedimiento de consulta conforme, el de concertación, el de codecisión, el de dictamen y el de
+cooperación.',
+3,
+6
+),
+(
+'¿Cuánto dura el mandato de los jueces del Tribunal de Justicia de la Comunidad europea?',
+'Tres años.',
+'Cuatro años renovable parcialmente cada dos años.',
+'Cinco años.',
+'Seis años renovable parcialmente cada tres.',
+4,
+6
+),
+(
+'¿Cuáles son los recursos directos del TJUE referidos al control de los órganos
+comunitarios?',
+'Los recursos de anulación, plena jurisdicción y carencia.',
+'Los recursos de anulación, casación y omisión.',
+'Los recursos de carencia, incumplimiento y cuestión prejudicial.',
+'Los recursos de anulación, excepción de ilegalidad y carencia.',
+2,
+6
+),
+(
+'¿Cuántos jueces forman en 2018 el Tribunal General y en qué fecha empezó a funcionar de
+manera efectiva?',
+'Lo forman 47 jueces y comenzó a funcionar el 1 de noviembre de 1989.',
+'Lo forman 28 jueces y comenzó a funcionar el 1 de noviembre de 1993.',
+'Lo forman 56 jueces y comenzó a funcionar el 1 de enero de 1994.',
+'Ninguna es correcta.',
+1,
+6
+)
+
+
+
+  /*
 (
   '',
   '',
@@ -361,7 +606,7 @@ INSERT INTO preguntas (pregunta, op1, op2, op3, op4, respuesta,tema)
   )
   
   
-  
+  */
   
   
   
