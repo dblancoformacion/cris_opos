@@ -66,7 +66,7 @@ window.addEventListener('load', () => {
                 /* ********************** SEGUNDOS  ********************** */
                 setInterval(() => {
                     document.querySelector("#s0").innerHTML = s0;
-                    if(contador) s0++;
+                    if(contador) s0++; /* si contador es true 1 */
                     if (s0 == 10) {
                         s0 = 0;
                     }
