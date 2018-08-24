@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="1.css">
     
     <script type="text/javascript" src="1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
 </head>
 
@@ -70,7 +71,7 @@
            <div class="derecha">
               <nav id="menu">
                          <ul>
-                           <li><a href="#">TEST POR TEMAS</a> 
+                           <li><a href="#"> <i class="fas fa-bars"></i>TEST POR TEMAS</a> 
                              <ul></ul>
                            </li>
                           </ul>             

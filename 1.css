@@ -162,6 +162,7 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 }
 #menu ul {
  list-style:none;
+
  margin:0;
  padding:0;
  z-index: 10;
@@ -171,6 +172,7 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 
 #menu ul li {
  background-color:#2e518b;
+ width: 100%;
 }
 
 
@@ -178,7 +180,7 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 
 #menu ul a {
  display:block;
- width: 330px;
+ width: 100%;
  color:#fff;
  text-decoration:none;
  font-weight:400;
@@ -190,12 +192,15 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 }
 
 #menu>ul>li>a{
-	text-align: center;
-	margin-top: 5px;
+	
+	margin: 10px;
 	line-height: 65px;
 	font-size: 30px;
 	font-weight: bold;
 	padding: 0;
+}
+.fas{
+	margin:0 15px;
 }
 
 /* items del menu */
@@ -227,7 +232,7 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 /* items del menu desplegable */
 
 #menu ul ul li {
-	width: 330px;
+	width: 100%;
  float:none;
  
 }
@@ -235,7 +240,7 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 /* enlaces de los items del menu desplegable */
 
 #menu ul ul a {
-	width: 330px;
+	width: 100%;
  line-height:120%;
  padding:10px 15px;
  z-index: 10;
