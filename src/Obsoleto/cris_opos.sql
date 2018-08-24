@@ -8,7 +8,6 @@ CREATE TABLE cuerpos(
   cuerpo varchar(255),
   PRIMARY KEY(id_cuerpo)
   );
-
 INSERT INTO cuerpos(administracion,cuerpo) VALUES
   ('General','Cuerpo Técnico Superior.'),
   ('General','Cuerpos de Gestión.'),
@@ -44,7 +43,6 @@ CREATE TABLE cursos(
   FOREIGN KEY(institucion) REFERENCES instituciones(id_institucion),
   PRIMARY KEY(id_curso)
   );
-
 INSERT INTO cursos(cuerpo,institucion) VALUES
   (4,1);
 

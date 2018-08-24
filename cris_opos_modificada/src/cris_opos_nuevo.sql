@@ -1,6 +1,6 @@
-DROP DATABASE if EXISTS cris_opos;
-CREATE DATABASE cris_opos;
-USE cris_opos;
+DROP DATABASE if EXISTS cris_opos_nuevo;
+CREATE DATABASE cris_opos_nuevo;
+USE cris_opos_nuevo;
 
 CREATE TABLE cuerpos(
   id_cuerpo int AUTO_INCREMENT,
@@ -9,7 +9,61 @@ CREATE TABLE cuerpos(
   PRIMARY KEY(id_cuerpo)
   );
 
-INSERT INTO cuerpos(administracion,cuerpo) VALUES
+CREATE TABLE instituciones(
+  id_institucion int AUTO_INCREMENT,
+  institucion varchar(255),
+  PRIMARY KEY(id_institucion)
+  );
+
+CREATE TABLE oposiciones(
+  id_oposicion int AUTO_INCREMENT,
+  enlace_convocatoria varchar(255),
+  enlace_bases varchar(255),
+  enlace_oferta varchar(255),
+  PRIMARY KEY(id_oposicion)
+  );
+CREATE TABLE convocan(
+  oposicion int,
+  institucion int,
+  cuerpo int,
+  FOREIGN KEY (oposicion) REFERENCES oposiciones(id_oposicion),
+  FOREIGN KEY (institucion) REFERENCES instituciones(id_institucion),
+  FOREIGN KEY(cuerpo) REFERENCES cuerpos(id_cuerpo),
+  PRIMARY KEY(oposicion,institucion,cuerpo)
+  );
+
+CREATE TABLE temas(
+  id_tema int AUTO_INCREMENT,
+  tema varchar(255),
+  PRIMARY KEY(id_tema)
+  );
+CREATE TABLE incluyen(
+  tema int,
+  oposicion int,
+  n_tema int,
+  FOREIGN KEY (tema) REFERENCES temas(id_tema),
+  FOREIGN KEY(oposicion) REFERENCES oposiciones(id_oposicion),
+  PRIMARY KEY(tema,oposicion,n_tema)
+  );
+
+
+CREATE TABLE preguntas(
+  id_pregunta int AUTO_INCREMENT,
+  pregunta text,
+  op1 text,
+  op2 text,
+  op3 text,
+  op4 text,
+  respuesta int,
+  tema int,
+  INDEX(tema),
+  FOREIGN KEY (tema) REFERENCES temas(id_tema),
+  PRIMARY KEY(id_pregunta)
+  ); 
+
+
+/* Meto registros */
+  INSERT INTO cuerpos(administracion,cuerpo) VALUES
   ('General','Cuerpo Técnico Superior.'),
   ('General','Cuerpos de Gestión.'),
   ('General','Cuerpo Administrativo.'),
@@ -25,111 +79,67 @@ INSERT INTO cuerpos(administracion,cuerpo) VALUES
   ('Especial','Cuerpo de Técnicos Auxiliares de Seguridad y Vigilancia.'),
   ('Especial','Cuerpo de Agentes del Medio Natural.'),
   ('Especial','Cuerpo de Agentes de Seguridad.');
-  
-CREATE TABLE instituciones(
-  id_institucion int AUTO_INCREMENT,
-  institucion varchar(255),
-  PRIMARY KEY(id_institucion)
-  );
+
   INSERT INTO instituciones (institucion) VALUES
   ('Gobierno de Cantabria'),
   ('Ayuntamiento de Santander'),
   ('Ministerio de Administración Pública');
+  
+INSERT INTO oposiciones(enlace_convocatoria,enlace_bases,enlace_oferta) VALUES
+  ('','','https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=320986');
 
-CREATE TABLE cursos(
-  id_curso int AUTO_INCREMENT,
-  cuerpo int,
-  institucion int,
-  FOREIGN KEY (cuerpo) REFERENCES cuerpos(id_cuerpo),
-  FOREIGN KEY(institucion) REFERENCES instituciones(id_institucion),
-  PRIMARY KEY(id_curso)
-  );
-
-INSERT INTO cursos(cuerpo,institucion) VALUES
-  (4,1);
-
-
-CREATE TABLE temas(
-  id_tema int AUTO_INCREMENT,
-  n_tema int NOT NULL,
-  tema varchar(255),
-  INDEX(n_tema),
-  PRIMARY KEY(id_tema)
-  );
-
-INSERT INTO temas(n_tema,tema) VALUES
-  (1,'La Constitución Española de 1978.'),
-  (2,'La Corona. '),
-  (3,'Las Cortes Generales'),
-  (4,' El Gobierno y la Administración.'),
-  (5,'La organización territorial del Estado.'),
-  (6,'La Unión Europea.'),
-  (7,'El Poder Judicial y el Tribunal Constitucional.'),
-  (8,'Antecedentes históricos de la Comunidad Autónoma de Cantabria.'),
-  (9,'El Estatuto de Autonomía para Cantabria.'),
-  (10,'Los órganos de gobierno y administración de la Comunidad Autónoma de Cantabria.'),
-  (11,'Las fuentes del derecho.'),
-  (12,'El acto administrativo.'),
-  (13,'El procedimiento administrativo común: Fases. Interesados.'),
-  (14,'Nulidad y anulabilidad. Revisión. Recursos.'),
-  (15,'El personal al servicio de la Administración de la Comunidad Autónoma de Cantabria.'),
-  (16,'TREBEP.'),
-  (17,'La Seguridad Social.'),
-  (18,'Concepto de informática.'),
-  (19,'Estructura y almacenamiento de datos.'),
-  (20,'La documentación administrativa.'),
-  (21,'El Manual de Atención al Ciudadano y la Carta de Derechos de la Ciudadanía.'),
-  (22,'Transparencia, acceso a la información pública y normas de buen gobierno.'),
-  (23,'P.R.L.'),
-  (24,'Igualdad. Violencia de género. Discapacidad y dependencia');
-
-
-CREATE TABLE incluyen (
-  curso int,
-  tema int,
-  FOREIGN KEY(curso) REFERENCES cursos(id_curso),
-  FOREIGN KEY(tema) REFERENCES temas(id_tema),
-  PRIMARY KEY(curso,tema)
-  );
-INSERT INTO incluyen(curso,tema) VALUES
-  (1,1),
-  (1,2),
-  (1,3),
-  (1,4),
-  (1,5),
-  (1,6),
-  (1,7),
-  (1,8),
-  (1,9),
-  (1,10),
-  (1,11),
-  (1,12),
-  (1,13),
-  (1,14),
-  (1,15),
-  (1,16),
-  (1,17),
-  (1,18),
-  (1,19),
-  (1,20),
-  (1,21),
-  (1,22),
-  (1,23),
-  (1,24);
-
-
-CREATE TABLE preguntas(
-  id_pregunta int AUTO_INCREMENT,
-  pregunta text,
-  op1 text,
-  op2 text,
-  op3 text,
-  op4 text,
-  respuesta int,
-  tema int,
-  FOREIGN KEY (tema) REFERENCES temas(n_tema),
-  PRIMARY KEY(id_pregunta)
-  ); 
+INSERT INTO convocan(oposicion,institucion,cuerpo) VALUES
+  (1,1,4);
+INSERT INTO temas(tema) VALUES
+  ('La Constitución Española de 1978.'),
+  ('La Corona. '),
+  ('Las Cortes Generales'),
+  (' El Gobierno y la Administración.'),
+  ('La organización territorial del Estado.'),
+  ('La Unión Europea.'),
+  ('El Poder Judicial y el Tribunal Constitucional.'),
+  ('Antecedentes históricos de la Comunidad Autónoma de Cantabria.'),
+  ('El Estatuto de Autonomía para Cantabria.'),
+  ('Los órganos de gobierno y administración de la Comunidad Autónoma de Cantabria.'),
+  ('Las fuentes del derecho.'),
+  ('El acto administrativo.'),
+  ('El procedimiento administrativo común: Fases. Interesados.'),
+  ('Nulidad y anulabilidad. Revisión. Recursos.'),
+  ('El personal al servicio de la Administración de la Comunidad Autónoma de Cantabria.'),
+  ('TREBEP.'),
+  ('La Seguridad Social.'),
+  ('Concepto de informática.'),
+  ('Estructura y almacenamiento de datos.'),
+  ('La documentación administrativa.'),
+  ('El Manual de Atención al Ciudadano y la Carta de Derechos de la Ciudadanía.'),
+  ('Transparencia, acceso a la información pública y normas de buen gobierno.'),
+  ('P.R.L.'),
+  ('Igualdad. Violencia de género. Discapacidad y dependencia');
+INSERT INTO incluyen(tema,n_tema,oposicion) VALUES
+  (1,1,1),
+  (2,2,1),
+  (3,3,1),
+  (4,4,1),
+  (5,5,1),
+  (6,6,1),
+  (7,7,1),
+  (8,8,1),
+  (9,9,1),
+  (10,10,1),
+  (11,11,1),
+  (12,12,1),
+  (13,1,1),
+  (14,14,1),
+  (15,15,1),
+  (16,16,1),
+  (17,17,1),
+  (18,18,1),
+  (19,19,1),
+  (20,20,1),
+  (21,21,1),
+  (22,22,1),
+  (23,23,1),
+  (24,24,1);
 INSERT INTO preguntas (pregunta, op1, op2, op3, op4, respuesta,tema)
   VALUES (
   '(99/2003) Si varios ordenadores están conectados en red pueden (señalar la respuesta incorrecta)',
@@ -624,11 +634,10 @@ manera efectiva?',
   )*/
 
   ;
-
-SELECT * FROM preguntas
-  WHERE tema BETWEEN 1 AND 3
-  ORDER BY RAND() LIMIT 5;
-
-
-
-SELECT n_tema,CONCAT('Tema ',n_tema,': ',tema) tema FROM temas;
+    SELECT * FROM convocan;
+    SELECT * FROM preguntas;
+    SELECT * FROM incluyen;
+    SELECT * FROM  instituciones;
+    SELECT * FROM  oposiciones;
+    SELECT * FROM  preguntas;
+    SELECT * FROM temas; 
