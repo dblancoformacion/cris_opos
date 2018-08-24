@@ -14,11 +14,17 @@
 
 
 
-        sql2js('temas','cris_opos',"
-            SELECT n_tema,CONCAT('Tema ',n_tema,': ',tema)tema FROM temas;            
+        sql2js('temas','cris_opos_nuevo',"
+                      SELECT id_tema,CONCAT('Tema ',n_tema,': ',tema) tema 
+                        FROM (SELECT id_tema, n_tema,temas.tema FROM incluyen
+                                JOIN 
+                                temas
+                                ON
+                                 incluyen.tema=id_tema
+                                WHERE oposicion=1)c1;
             ");
 
-        sql2js('datos','cris_opos',"
+        sql2js('datos','cris_opos_nuevo',"
             SELECT * FROM preguntas
                 WHERE tema BETWEEN ".($_GET['t_ini']*1)." AND ".($_GET['t_fin']*1)."
                 ORDER BY RAND() LIMIT ".($_GET['n']*1).";

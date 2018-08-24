@@ -641,3 +641,20 @@ manera efectiva?',
     SELECT * FROM  oposiciones;
     SELECT * FROM  preguntas;
     SELECT * FROM temas; 
+SELECT id_tema, n_tema,temas.tema FROM incluyen
+  JOIN 
+  temas
+  ON
+   incluyen.tema=id_tema
+  WHERE oposicion=1;
+  
+
+
+
+SELECT id_tema,CONCAT('Tema ',n_tema,': ',tema) tema 
+  FROM (SELECT id_tema, n_tema,temas.tema FROM incluyen
+  JOIN 
+  temas
+  ON
+   incluyen.tema=id_tema
+  WHERE oposicion=1)c1;
