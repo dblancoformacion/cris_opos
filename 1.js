@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
    /* Fin mostrar preguntas en  pantalla */
 
 /*   ******************************************************** INTRODUCIR TÍTULOS DE LOS TEMAS  ********************************************************  */
-    var v1 = document.querySelector(".derecha ul");
+    var v1 = document.querySelector("#menu ul li ul");
     console.log("temas",temas);
     console.log("v1", v1);
     for (var i = 0; i < temas.length; i++) {
@@ -68,7 +68,7 @@ window.addEventListener('load', () => {
                 /* ********************** SEGUNDOS  ********************** */
                 setInterval(() => {
                     document.querySelector("#s0").innerHTML = s0;
-                    if(contador) s0++;
+                    if(contador) s0++; /* si contador es true 1 */
                     if (s0 == 10) {
                         s0 = 0;
                     }

@@ -7,6 +7,11 @@ body{
 	font-family: arial;
 	background-color: #F7F7F7FF;
 }
+h1{
+ background-color: #333;
+ color: white;
+ line-height: 70px;
+}
 h1,h2{
 	text-align: center;
 	margin:5px 0;
@@ -21,30 +26,41 @@ label{
 	padding: 5px;
 }
 
-/* ********************** ESTRUCTUTA ********************** */
+/* ********************** ESTRUCTURA ********************** */
 
 .wrapper{
-	width: 1100px;
-	margin: 20px auto;
+	width: 100%;
+	margin: 0px auto;
 	background-color:red;
+}
+.filtro{
+	padding: 20px;
+
+	text-align: center;
+	background-color: #B0BEC5;
 }
 .izquierda{
 	float: left;
 	width: 69%;
 	margin-right: 1%;	
 }
+.preguntas{
+	margin: 30px;
+}
 
 .derecha{
 	float: left;
 	width: 30%;
 	height: 100%;
+	
 }
 
 .izquierda ul{
 	list-style-type: none;
 }
-div>p{
+div>p, .filtro{
 	font-weight: bold;
+	font-size: 1.3em;
 }
 /* **********************SOLUCIONES **********************  */
 .mostrarSoluciones{
@@ -92,10 +108,20 @@ div>p{
 /* **********************RESPUESTAS ********************** */
 ul>li>div>ul>li{
 	line-height: 25px;
+	font-size: 1.1em;
+	width: 100%;
 }
 
-ul>li>div>ul>li:hover{
-background-color: #E5E7E9 ;
+ul>li>div>ul>li>:hover{
+background-color: #F7DC6F ;
+
+}
+input[type=radio]{
+	margin: 10px;
+	vertical-align: middle;
+}
+.preguntas label{
+	display: inline-block;
 }
 
 /* **********************BOTONES ********************** */
@@ -117,57 +143,129 @@ background-color: #E5E7E9 ;
 	font-weight: bold;
 }
 
-/* ANCHURA DE LOS INPUTS */
+/* **********************ANCHURA DE LOS INPUTS ********************** */
 
 
 input[name=t_ini], input[name=t_fin],input[name=n] {
 	width: 100px;
+	height: 30px;
 }
 
 
-/* ZONA DERECHA */
-.temas{
-	background-color:#333;
-	color: #f2f2f2;
-	height: 150px;
-}
-.derecha>ul>li>a{
-	display: table-cell;
-	font-family: arial;
-	font-size: 14px;
-	line-height: 30px;
-	width: 330px;
-	background-color: #ABEBC6;
-	color: #20633C;
-	border:2px solid #20633C;
-	border-bottom: none;
-	text-align: left;
-	padding:5px;
-	text-decoration: none;
 
+/*********************** MENÚ ***********************/
+#menu{
+	float:right;
+	width: 100%;
+	margin-top: 5px;
+	z-index: 10;
 }
-.derecha>ul>li>a:nth-child(24){
-	border-bottom: 2px solid #20633C;
-}
-.derecha>ul{
-	list-style-type: none;
+#menu ul {
+ list-style:none;
+ margin:0;
+ padding:0;
+ z-index: 10;
 }
 
-.derecha>ul>li>a:hover{
-	color:#ABEBC6;
-	background-color: #20633C;
+/* items del menu */
+
+#menu ul li {
+ background-color:#2e518b;
+}
+
+
+/* enlaces del menu */
+
+#menu ul a {
+ display:block;
+ width: 330px;
+ color:#fff;
+ text-decoration:none;
+ font-weight:400;
+ font-size:15px;
+ padding:10px;
+ font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ text-transform:uppercase;
+ letter-spacing:1px;
+}
+
+#menu>ul>li>a{
+	text-align: center;
+	margin-top: 5px;
+	line-height: 65px;
+	font-size: 30px;
 	font-weight: bold;
+	padding: 0;
+}
+
+/* items del menu */
+
+#menu ul li {
+ position:relative;
+ float:left;
+ margin:0;
+ padding:0;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu ul li:hover {
+ background:#5b78a7;
+}
+
+/* menu desplegable */
+
+#menu ul ul {
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ background:#eee;
+ padding:0;
+}
+
+/* items del menu desplegable */
+
+#menu ul ul li {
+	width: 330px;
+ float:none;
+ 
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+	width: 330px;
+ line-height:120%;
+ padding:10px 15px;
+ z-index: 10;
 }
 
 
-/* CRONÓMETRO */
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover > ul {
+ display:block;
+}
+
+
+
+
+
+/* ********************** CRONÓMETRO ********************** */
 
 @font-face{
  font-family:'DigitalDismay';
  src: url('font/DigitalDismay.otf');
 }
 .cronometro{
-	float:right;
+	background-color: #333;
+ 	color: white;
+	margin:0 auto;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 1;
 	opacity:0;
 }
 
