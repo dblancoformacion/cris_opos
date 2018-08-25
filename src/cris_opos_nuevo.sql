@@ -680,7 +680,7 @@ SELECT id_pregunta,
        op3,
        op4,
        respuesta,
-      tema FROM temas 
+      preguntas.tema FROM temas 
   JOIN preguntas 
   ON temas.id_tema = preguntas.tema
   ORDER BY RAND() LIMIT 5;

@@ -46,10 +46,10 @@
                <div class="temas">
                    <h1>ENTRENADOR AUXILIAR ADMINISTRATIVO GOBIERNO DE CANTABRIA</h1>
                 <div class="filtro">                  
-                    <label>Del tema:</label> <input type="text" name="t_ini" >
-                    <label>al tema:</label><input type="text" name="t_fin">
-                    <label>Nº de preguntas</label><input type="number" name="n" >
-                    <input type="submit" name="ir" id="ir" value="Elegir">
+                    <div class="enlinea"><label>Del tema:</label> <input type="text" name="t_ini" ></div>
+                    <div class="enlinea"><label>al tema:</label><input type="text" name="t_fin"></div>
+                    <div class="enlinea"><label>Nº de preguntas</label><input type="number" name="n" ></div>
+                   <div class="enlinea"> <input type="submit" name="ir" id="ir" value="Elegir"></div>
                     
                 </div>
 
