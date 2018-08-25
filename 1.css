@@ -10,12 +10,15 @@ body{
 h1{
  background-color: #333;
  color: white;
+ text-align: center;
  line-height: 70px;
+ margin-left: 5px;
 }
+/*
 h1,h2{
 	text-align: center;
 	margin:5px 0;
-}
+}*/
 h2{
 	background-color: #A5FF7FFF;
 	line-height: 50px;
@@ -35,7 +38,7 @@ label{
 }
 .filtro{
 	padding: 20px;
-
+	margin-left: 5px;
 	text-align: center;
 	background-color: #B0BEC5;
 }
@@ -120,6 +123,9 @@ ul>li>div>ul>li{
 	font-size: 1.2em;
 	margin-left: 25px;
 	width: 100%;
+	display: flex;
+   justify-content: left;
+   align-items: center;
 }
 
 ul>li>div>ul>li>:hover{
@@ -128,7 +134,7 @@ background-color: #F7DC6F ;
 }
 input[type=radio]{
 	margin: 10px;
-	vertical-align: middle;
+	vertical-align: center;
 }
 .preguntas label{
 	display: inline-block;
@@ -178,6 +184,7 @@ input[name=t_ini], input[name=t_fin],input[name=n] {
 	float:right;
 	width: 100%;
 	margin-top: 5px;
+	margin-right: 5px;
 	z-index: 10;
 }
 #menu ul {

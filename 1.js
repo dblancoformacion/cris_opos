@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     console.log("temas",temas);
     console.log("v1", v1);
     for (var i = 0; i < temas.length; i++) {
-        v1.innerHTML += "<li><a href='?t_ini=" + temas[i].n_tema + "&t_fin=" + temas[i].n_tema + "&n=5'>"+ temas[i].tema+"</a></li>";
+        v1.innerHTML += "<li><a href='?t_ini=" + temas[i].id_tema + "&t_fin=" + temas[i].id_tema + "&n=30'>"+ temas[i].tema+"</a></li>";
     }
 
 
