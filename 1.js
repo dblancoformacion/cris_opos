@@ -25,6 +25,7 @@ window.addEventListener('load', () => {
 
     if (datos.length > 0) {
         document.querySelector("#boton").style.opacity = 1;
+         document.querySelector(".preguntas").style.opacity = 1;
 
     }
    /* Fin mostrar preguntas en  pantalla */

@@ -9,7 +9,7 @@
 
         include_once "libreria.php";
         if(!isset($_GET['t_ini'])||$_GET['t_ini']<1) $_GET['t_ini']=1;
-        if(!isset($_GET['t_fin'])||$_GET['t_fin']<1) $_GET['t_fin']=24;
+        if(!isset($_GET['t_fin'])||$_GET['t_fin']<1) $_GET['t_fin']=$_GET['t_ini'];
         if(!isset($_GET['n'])||$_GET['n']<1) $_GET['n']=0;
 
 
@@ -59,7 +59,7 @@
                 <div class="tactual"></div>
                  <form>
                    <ul></ul>
-                   <input type="button" name="enviar" value="Corregir" id="boton">
+                  <div class="corregir"> <input type="button" name="enviar" value="CORREGIR" id="boton"></div>
                </form>
                </div>
                

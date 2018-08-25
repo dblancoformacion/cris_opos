@@ -45,7 +45,12 @@ label{
 	margin-right: 1%;	
 }
 .preguntas{
-	margin: 30px;
+	margin: 20px;
+	padding: 10px;
+	width: 98.35%;
+	min-height: 400px;
+	background-color: #DCE1E4;
+	opacity: 0;
 }
 
 .derecha{
@@ -75,6 +80,8 @@ div>p, .filtro{
 }
 .cerrar{
 	text-align: right;
+	line-height: 30px;
+	font-size: 25px;
 	padding-right: 5px;
 	background-color: #ccc;
 	color:red;
@@ -102,13 +109,16 @@ div>p, .filtro{
 
 .izquierda li{
 	margin: 10px;
+	margin-left: 35px;
+	vertical-align: middle;
 }
 
 
 /* **********************RESPUESTAS ********************** */
 ul>li>div>ul>li{
 	line-height: 25px;
-	font-size: 1.1em;
+	font-size: 1.2em;
+	margin-left: 25px;
 	width: 100%;
 }
 
@@ -128,27 +138,37 @@ input[type=radio]{
 
 /* ELEGIR TEMA */
 #ir{
-	width: 50px;
+	width: 150px;
 	margin: 0 20px;
-	width: 60px;
-	height: 30px;
+	height: 35px;
+	font-size: 0.9em;
 	font-weight: bold;
 }
 /* CORREGIR */
 #boton{
 	opacity: 0;
-	margin: 0 auto;
-	width: 60px;
-	height: 30px;
+	margin: 15px auto;
+	width: 150px;
+	height: 50px;
+	background-color: #0BC521C4;
+	color: white;
+	font-size: 1.3em;
 	font-weight: bold;
 }
+#boton:hover{
+	background-color: #13AE2572;
 
+}
+.corregir{
+	float:none;
+	text-align: center;
+}
 /* **********************ANCHURA DE LOS INPUTS ********************** */
 
 
 input[name=t_ini], input[name=t_fin],input[name=n] {
 	width: 100px;
-	height: 30px;
+	height: 35px;
 }
 
 
