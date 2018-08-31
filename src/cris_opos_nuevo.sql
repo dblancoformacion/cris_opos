@@ -128,7 +128,7 @@ INSERT INTO incluyen(tema,n_tema,oposicion) VALUES
   (10,10,1),
   (11,11,1),
   (12,12,1),
-  (13,1,1),
+  (13,13,1),
   (14,14,1),
   (15,15,1),
   (16,16,1),
@@ -595,6 +595,7 @@ manera efectiva?',
   '',
   '',
   '',
+
   '',
   ''
   ),
@@ -658,3 +659,28 @@ SELECT id_tema,CONCAT('Tema ',n_tema,': ',tema) tema
   ON
    incluyen.tema=id_tema
   WHERE oposicion=1)c1;
+
+
+SELECT id_pregunta,
+       pregunta,
+       op1,
+       op2,
+       op3,
+       op4,
+       respuesta,
+       tema FROM preguntas
+                WHERE tema BETWEEN 1 AND 3
+                ORDER BY RAND() LIMIT 5;
+
+
+SELECT id_pregunta,
+       pregunta,
+       op1,
+       op2,
+       op3,
+       op4,
+       respuesta,
+      preguntas.tema FROM temas 
+  JOIN preguntas 
+  ON temas.id_tema = preguntas.tema
+  ORDER BY RAND() LIMIT 5;

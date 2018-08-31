@@ -13,26 +13,29 @@ window.addEventListener('load', () => {
     /* Fin declaración de variables */
 
 /*  ********************************************************  MOSTRAR PREGUNTAS ********************************************************   */
-
+    var c=0;
     for (var i = 0; i < datos.length; i++) {
         correctas[i] = datos[i].respuesta;
         preguntas[i] = '.preg' + datos[i].id_pregunta;
-        v.innerHTML += '<li><div class="' + preguntas[i] + '"><p>' + (i + 1) + (". ) ") + datos[i].pregunta + '</p><ul><li><input type="radio" id="f' + 1 * [i + 4] + '" name="p' + [i + 1] + '" value="1" class="p' + [i + 1] + '" ><label class="c' + [i + 1] + '" for="f' + 1 * [i + 4] + '">' + datos[i].op1 + '</label></li><li><input type="radio" id="f' + 2 * [i + 4] + '" name="p' + [i + 1] + '" value="2" class="p' + [i + 1] + '"><label class="c' + [i + 1] + '" for="f' + 2 * [i + 4] + '">' + datos[i].op2 + '</label></li><li><input type="radio" id="f' + 3 * [i + 4] + '" name="p' + [i + 1] + '" value="3" class="p' + [i + 1] + '"><label class="c' + [i + 1] + '" for="f' + 3 * [i + 4] + '">' + datos[i].op3 + '</label></li><li><input type="radio" id="f' + 4 * [i + 4] + '" name="p' + [i + 1] + '" value="4" class="p' + [i + 1] + '"><label class="c' + [i + 1] + '" for="f' + 4 * [i + 4] + '">' + datos[i].op4 + '</label></li></ul></div></li>';
+        v.innerHTML += '<li><div class="' + preguntas[i] + '"><p>' + (i + 1) + (". ) ") + datos[i].pregunta + '</p><ul><li><input type="radio" id="f' + 1 * [i + 1+c] + '" name="p' + [i + 1] + '" value="1" class="p' + [i + 1] + '" ><label class="c' + [i + 1] + '" for="f' + 1 * [i + 1+c] + '">' + datos[i].op1 + '</label></li><li><input type="radio" id="f' + 2 * [i + 1+c] + '" name="p' + [i + 1] + '" value="2" class="p' + [i + 1] + '"><label class="c' + [i + 1] + '" for="f' + 2 * [i + 1+c] + '">' + datos[i].op2 + '</label></li><li><input type="radio" id="f' + 3 * [i + 1+c] + '" name="p' + [i + 1] + '" value="3" class="p' + [i + 1] + '"><label class="c' + [i + 1] + '" for="f' + 3 * [i + 1+c] + '">' + datos[i].op3 + '</label></li><li><input type="radio" id="f' + 4 * [i + 1+c] + '" name="p' + [i + 1] + '" value="4" class="p' + [i + 1] + '"><label class="c' + [i + 1] + '" for="f' + 4 * [i + 1+c] + '">' + datos[i].op4 + '</label></li></ul></div></li>';
         correctas[i] = datos[i].respuesta;
+         c+=4;
+
     }
 
     if (datos.length > 0) {
         document.querySelector("#boton").style.opacity = 1;
+         document.querySelector(".preguntas").style.opacity = 1;
 
     }
    /* Fin mostrar preguntas en  pantalla */
 
 /*   ******************************************************** INTRODUCIR TÍTULOS DE LOS TEMAS  ********************************************************  */
-    var v1 = document.querySelector(".derecha ul");
+    var v1 = document.querySelector("#menu ul li ul");
     console.log("temas",temas);
     console.log("v1", v1);
     for (var i = 0; i < temas.length; i++) {
-        v1.innerHTML += "<li><a href='?t_ini=" + temas[i].n_tema + "&t_fin=" + temas[i].n_tema + "&n=5'>"+ temas[i].tema+"</a></li>";
+        v1.innerHTML += "<li><a href='?t_ini=" + temas[i].id_tema + "&t_fin=" + temas[i].id_tema + "&n=30'>"+ temas[i].tema+"</a></li>";
     }
 
 

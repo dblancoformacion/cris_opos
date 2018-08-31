@@ -9,16 +9,22 @@
 
         include_once "libreria.php";
         if(!isset($_GET['t_ini'])||$_GET['t_ini']<1) $_GET['t_ini']=1;
-        if(!isset($_GET['t_fin'])||$_GET['t_fin']<1) $_GET['t_fin']=24;
+        if(!isset($_GET['t_fin'])||$_GET['t_fin']<1) $_GET['t_fin']=$_GET['t_ini'];
         if(!isset($_GET['n'])||$_GET['n']<1) $_GET['n']=0;
 
 
 
-        sql2js('temas','cris_opos',"
-            SELECT n_tema,CONCAT('Tema ',n_tema,': ',tema)tema FROM temas;            
+        sql2js('temas','cris_opos_nuevo',"
+                      SELECT id_tema,CONCAT('Tema ',n_tema,': ',tema) tema 
+                        FROM (SELECT id_tema, n_tema,temas.tema FROM incluyen
+                                JOIN 
+                                temas
+                                ON
+                                 incluyen.tema=id_tema
+                                WHERE oposicion=1)c1;
             ");
 
-        sql2js('datos','cris_opos',"
+        sql2js('datos','cris_opos_nuevo',"
             SELECT * FROM preguntas
                 WHERE tema BETWEEN ".($_GET['t_ini']*1)." AND ".($_GET['t_fin']*1)."
                 ORDER BY RAND() LIMIT ".($_GET['n']*1).";
@@ -30,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="1.css">
     
     <script type="text/javascript" src="1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
 </head>
 
@@ -38,38 +45,48 @@
        <div class="izquierda"> <form>
                <div class="temas">
                    <h1>ENTRENADOR AUXILIAR ADMINISTRATIVO GOBIERNO DE CANTABRIA</h1>
-                  <label>Del tema:</label> <input type="text" name="t_ini" >
-                  <label>al tema:</label><input type="text" name="t_fin">
-                  <label>Nº de preguntas</label><input type="number" name="n" >
-                  <input type="submit" name="ir" id="ir" value="Elegir">
-                  <div class="cronometro">
-                      <div class="digitos" id="h1"></div>
-                       <div class="digitos" id="h0"></div>
-                       <div class="separador">:</div>
-                       <div class="digitos" id="m1"></div>
-                       <div class="digitos" id="m0"></div>
-                       <div class="separador">:</div>
-                       <div class="digitos" id="s1"></div>
-                       <div class="digitos" id="s0"></div>
-                  </div>
+                <div class="filtro">                  
+                    <div class="enlinea"><label>Del tema:</label> <input type="text" name="t_ini" ></div>
+                    <div class="enlinea"><label>al tema:</label><input type="text" name="t_fin"></div>
+                    <div class="enlinea"><label>Nº de preguntas</label><input type="number" name="n" ></div>
+                   <div class="enlinea"> <input type="submit" name="ir" id="ir" value="Elegir"></div>
+                    
+                </div>
+
                </div>
                </form>
-               <form>
-                   <ul>
-                       
-                   </ul>
-                   <input type="button" name="enviar" value="Corregir" id="boton">
+               <div class="preguntas">
+                <div class="tactual"></div>
+                 <form>
+                   <ul></ul>
+                  <div class="corregir"> <input type="button" name="enviar" value="CORREGIR" id="boton"></div>
                </form>
+               </div>
+               
            </div>
            <div class="mostrarSoluciones">
                <div class="cerrar"><a href="index.php" title=""><i class="fa fa-window-close" aria-hidden="true"></i></a></div>
                <div class="sol"></div>
            </div>
            <div class="derecha">
-               <h2>TEST POR TEMAS</h2>
-               <ul>
-               </ul>
-           </div>
+              <nav id="menu">
+                         <ul>
+                           <li><a href="#"> <i class="fas fa-bars"></i>TEST POR TEMAS</a> 
+                             <ul></ul>
+                           </li>
+                          </ul>             
+              </nav>
+              <div class="cronometro">
+                        <div class="digitos" id="h1"></div>
+                         <div class="digitos" id="h0"></div>
+                         <div class="separador">:</div>
+                         <div class="digitos" id="m1"></div>
+                         <div class="digitos" id="m0"></div>
+                         <div class="separador">:</div>
+                         <div class="digitos" id="s1"></div>
+                         <div class="digitos" id="s0"></div>
+                    </div>
+          </div>
     </div>
 </body>
 
