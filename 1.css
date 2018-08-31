@@ -30,6 +30,12 @@ label{
 	padding: 5px;
 }
 
+/* PREGUNTAS */
+ul{
+	list-style: none;
+}
+
+
 /* ********************** ESTRUCTURA ********************** */
 
 .wrapper{
